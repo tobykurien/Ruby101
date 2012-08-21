@@ -32,6 +32,7 @@ Personalities:
 Additional reading material:
 - The "pickaxe book" - http://www.amazon.com/Programming-Ruby-Pragmatic-Programmers-Second/dp/0974514055
 - Why's Poignant Guide to Ruby: http://mislav.uniqpath.com/poignant-guide/
+- Exploring everyday things with R and Ruby: http://shop.oreilly.com/product/0636920022626.do
 - Meta-programming in Ruby: 
   - http://ruby-metaprogramming.rubylearning.com/
   - http://pragprog.com/book/ppmetr/metaprogramming-ruby

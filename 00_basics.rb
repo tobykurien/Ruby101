@@ -27,6 +27,11 @@ puts "1" + "2"
 puts "1".to_i + "2".to_f        # type conversion
 puts 1.to_s + 2.to_s
 puts "this".is_a?(String)
+puts "Clover".include? "love"
+
+str1 = "Hello"
+str1.upcase!                    # destructive methods have !
+puts str1
 
 avril_quote = "I'm a lot wiser.  Now I know 
  what the business is like -- what you have 
