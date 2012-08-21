@@ -26,6 +26,14 @@ class Point
     end
 end
 
+# override any class
+class Fixnum
+    def *(num)
+      self / num    # change multiplication into division!
+    end
+end
+puts "4 * 2 = #{4 * 2}"
+
 p2 = Point.new(5,5)
 puts p.+(p2)
 puts p + p2

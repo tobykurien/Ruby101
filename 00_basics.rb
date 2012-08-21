@@ -20,7 +20,7 @@ var3 = 1..100                   # number range, inclusive
 var4 = 0...100                  # excludes last value
 
 # strings
-puts "Hello" + " World"
+puts "Hello" + ' World'         # single or double quotes
 puts "Hi! " * 3
 puts "hello".capitalize         # also reverse,next,upcase,downcase,swapcase
 puts "1" + "2"
@@ -51,7 +51,7 @@ puts "this".is_a? String        # brackets optional for method call, period opti
 
 # array
 arr1 = [ 1, 2, "3", 4.0 ]
-puts arr1.inspect
+puts arr1[1]
 
 # hash
 data = {
@@ -59,5 +59,5 @@ data = {
     :surname => "Kurien",    
 }
 
-puts data.inspect
+puts data[:name]
 
