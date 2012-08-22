@@ -1,7 +1,10 @@
 
 var1 = 1 + 1                    # variable
 p "1 + 1 = #{var1}"          # string templating
+p "Hi %s, meet %s! Cost: R%0.2f" % [ "Jack", "Jill", 12.3456 ]  # more string templating
 $global = "global variable"     # global variable (like environment variables)
+p "Script name: %s" % $0
+p "Params: %p" % $*
 
 Pi = 3.14159                    # constant
 Pi = 123                     # can be changed, you only get a warning
@@ -73,6 +76,19 @@ data = {
 }
 
 p data[:name]
+
+# easy word array
+word_array = %w{
+  one two three four five six
+}
+p word_array
+
+# easy embedded string, no escaping needed (can use %{} or %q{})
+embedded_string = %{
+  In this 'sentence' we can "quote" and 'quote' as
+  much as we like!
+}
+p embedded_string
 
 # errors
 1.include? 2 rescue p "Oops, #{$!}"

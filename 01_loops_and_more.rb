@@ -38,14 +38,16 @@ end
   p "#{index} - #{i}"
 end
 
-# list comprehension
+# array functions
 p [1,2,3,4,5].collect{|salary| salary *= 1.10 } # 10% increase (can also use map)
 p [1,2,3,4,5].reduce{|tot,i| tot + i}           # sum all the values
 p [1,2,[3,4],[5,6]].flatten                     # flatten into one array
 p [1,2,3,4,5].reject{|i| i % 2 == 0}            # remove even numbers
-p [1,2,3] + [4,5]                               # add 2 arrays
+p [1,2,3] + [4,5]                               # add 2 arrays. Also try - and *
 p [1,2,3] << 4 << 5                             # add items (like a stack), can 'pop' last value out
-p ["Hello", " world"].join(",")
+p ["Hello", " world"].join(",")                 # concatenate items
+p %w{ sort these words in ascending order }.sort  # sort items
+p %w{ apples pears peaches bananas }.grep /pe/    # search for items by regular expression
 
 # case
 def timeline( year )
@@ -61,4 +63,15 @@ def timeline( year )
  end
 end
 p timeline( 1945 )
+
+# method that takes a code block
+def loop(num)
+  num.times do
+    yield       # call the code block (can pass parameters too)
+  end
+end
+
+loop(10) do
+  p "Hi!"
+end
 

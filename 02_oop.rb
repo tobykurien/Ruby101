@@ -15,8 +15,9 @@ class Point
     end
 end
 
-p = Point.new(10,1)
-p p
+p1 = Point.new(10,1)
+p p1
+p p1.methods.sort.grep /instance/
 
 # add to class
 class Point
@@ -24,7 +25,15 @@ class Point
     def +(p2)
         Point.new @x+p2.x, @y+p2.y
     end
+    
+    # a class method
+    def self.make(str)
+      "My point is this: #{str}"
+    end
 end
+
+# call class method
+p Point::make "Ruby is cool"
 
 # override any class
 class Fixnum
@@ -35,8 +44,8 @@ end
 p "4 * 2 = #{4 * 2}"
 
 p2 = Point.new(5,5)
-p p.+(p2)
-p p + p2
+p "p1.+(p2) = %p" % (p1.+(p2))
+p "p1 + p2 = %p" % (p1 + p2)
 
 # named parameters
 class Point
