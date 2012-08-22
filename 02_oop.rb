@@ -16,7 +16,7 @@ class Point
 end
 
 p = Point.new(10,1)
-puts p
+p p
 
 # add to class
 class Point
@@ -32,11 +32,11 @@ class Fixnum
       self / num    # change multiplication into division!
     end
 end
-puts "4 * 2 = #{4 * 2}"
+p "4 * 2 = #{4 * 2}"
 
 p2 = Point.new(5,5)
-puts p.+(p2)
-puts p + p2
+p p.+(p2)
+p p + p2
 
 # named parameters
 class Point
@@ -49,7 +49,7 @@ class Point
 end
 
 p2.move :delta_x => -10 # shortcut for last parameter being a hashmap
-puts p2
+p p2
 
 # inheritance
 class Vertex < Point
@@ -66,7 +66,7 @@ class Vertex < Point
 end
 
 v = Vertex.new(10,20,30)
-puts v
+p v
 
 # inner class
 class Point
@@ -76,4 +76,4 @@ class Point
 end
 
 c = Point::Color.new
-puts c
+p c

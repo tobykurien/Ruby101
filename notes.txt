@@ -2,13 +2,7 @@ Ruby course outline (may change as I haven't written up the course yet):
 Introduction to Ruby
 - History & Philosophy
 - What makes Ruby different?
-- irb, gems
-- Syntax, Data types
-- Flow control
-- Exception handling
-- Structures (Arrays, Hashes)
-- OOP, Modules
-- Meta-programming
+- ruby, irb, gems
 
 Exercises
 - Simple scripts
