@@ -11,6 +11,7 @@ class Person
 end
 
 person = Person.new
+p person.respond_to? :name
 person.name = "Toby"
 person.surname = "Kurien"
 p person
@@ -29,6 +30,40 @@ class Person2
 end
 
 p2 = Person2.new
+p p2.respond_to? :name
 p p2.name
 p p2.address
+
+# adding keywords to the language to make a DSL using module mixin
+#--------------
+#  Here we set up the DSL magic
+#--------------
+  module CarProperties
+
+    # this method will be called as the class is loaded
+    def top_speed(value)
+      class_variable_set "@@top_speed", value   # set a class variable
+    end
+
+  end
+
+  class Car
+    extend CarProperties    # adds "top_speed" as a method
+    attr_accessor :colour   # normal attribute
+  end
+
+#--------------
+# Here we use the DSL
+#-------------- 
+class Toyota86 < Car
+  top_speed 230           # executes the "top_speed" method on the Car class
+  
+  def to_s
+    "Model: #{self.class}, Colour: #{@colour}, Top speed: #{@@top_speed}"
+  end
+end
+
+my_car = Toyota86.new
+my_car.colour = :blue
+p my_car.to_s
 
