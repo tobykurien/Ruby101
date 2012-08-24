@@ -1,4 +1,5 @@
 Exercise 1:
+==========
   Refer to this data of movies:
     movies = %{The Grapes of Wrath  1940  8.3  25770  Drama
 Harry Potter and the Goblet of Fire  2005  7.6  123237  Adventure  Family  Fantasy  Mystery  Adventure  Fantasy
@@ -24,21 +25,26 @@ BloodRayne  2005  2.7  20953  Action  Adventure  Fantasy  Horror}
   - What Is The The Sum Of All Votes Of The Top Two Movies?
   
 Exercise 2:
+==========
   Refer to Time class
 
-  - create a module that adds days,  weeks,  months,  years  to numbers
-  - also add ago and from_now to Time class
-  - also add weekday to Time class to convert wday into a weekday string like "Monday"
+  - create a module that adds days,  weeks,  months,  years  to any class
+  - also add ago and from_now which returns a Time object with current value subtracted or added respectively
+  - Add weekday to Time class to convert wday into a weekday string like "Monday"
+  - Using the above, execute the following:
   
-  print 5.days
-  print 7.weeks.ago
-  print 2.years.from_now.week_day
+    puts "Five days from now will be %p" % (Time.new + 5.days)
+    puts "Seven weeks ago was %p" % 7.weeks.ago
+    puts 2.years.from_now.weekday
 
 Exercise 3:
+==========
   Write a Sinatra webapp to input first name, surname, and gender in a form, then when submitted, adds the data to a text (csv) file.
   The home page should list the current submissions from the file.
 
 Exercise 4:
-  - monte carlo simulation of tossing coin and having repeated results
+==========
+  Write a Monte Carlo simulation of this problem: If a coin was tossed 1 million times, what are the chances that 
+  heads would come up 5 times in a row? To do this, you basically simulate the coin tosses using a random outcome 
+  and then count how many times the sequence happened, and then work out the percentage.
   
-
