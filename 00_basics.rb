@@ -26,6 +26,7 @@ p "Long number = #{1_234_567_890}"
 p "Big number = #{1.7e9}"
 var3 = 1..100                   # number range, inclusive
 var4 = 0...100                  # excludes last value
+p 1 <=> 2                    # comparator: 1 if first item is larger, -1 if not, 0 if they are equal
 
 # strings
 p "Hello" + ' World'         # single or double quotes

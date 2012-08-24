@@ -36,7 +36,7 @@ def registered_users
       :surname => csv[1],
       :gender => csv[2]
     }
-  end
+  end rescue users = []
   users
 end
 
@@ -45,7 +45,7 @@ post '/register' do
   # append data to CSV file (CSV object doesn't have append feature so using File instead)
   File.open("user_registration.csv", 'a') do |file|
     file << "#{params[:first_name]},#{params[:surname]},#{params[:gender]}\n"
-  end
+  end 
   redirect "/"
 end
 

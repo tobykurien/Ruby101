@@ -39,10 +39,11 @@ end
 end
 
 # array functions
+p [1,2,3,4,5].take(2)                           # grap a few items
 p [1,2,3,4,5].collect{|salary| salary *= 1.10 } # 10% increase (can also use map)
 p [1,2,3,4,5].reduce{|tot,i| tot + i}           # sum all the values
 p [1,2,[3,4],[5,6]].flatten                     # flatten into one array
-p [1,2,3,4,5].reject{|i| i % 2 == 0}            # remove even numbers
+p [1,2,3,4,5].reject{|i| i % 2 == 0}            # remove even numbers, opposite of select
 p [1,2,3] + [4,5]                               # add 2 arrays. Also try - and *
 p [1,2,3] << 4 << 5                             # add items (like a stack), can 'pop' last value out
 p ["Hello", " world"].join(",")                 # concatenate items
