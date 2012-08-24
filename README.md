@@ -22,4 +22,6 @@ Exploring everyday things with R and Ruby:
 Meta-programming in Ruby: 
 - http://ruby-metaprogramming.rubylearning.com/
 - http://pragprog.com/book/ppmetr/metaprogramming-ruby
+HollingBerries implementations in various languages (see Ruby implemetations):
+- https://github.com/apauley/HollingBerries
 
