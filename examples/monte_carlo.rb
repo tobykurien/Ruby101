@@ -13,8 +13,6 @@ SIMULATION_RUNS.times do
 
     # check if all tosses were the same
     same_tosses = tosses.reduce(0) do |total,item|
-      #puts "toss: #{total} - #{item}"
-      total ||= 0          # previous result is passed in, can be nil
       item == tosses[0] ? total + 1 : total
     end
     
