@@ -23,7 +23,7 @@ module NumExtras
   end
 
   def from_now
-    Time.new - self
+    Time.new + self
   end
 end
 

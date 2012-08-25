@@ -44,7 +44,7 @@ Exercise 3:
 
 Exercise 4:
 ==========
-  Write a Monte Carlo simulation of this problem: If a coin was tossed 1 million times, what are the chances that 
+  Write a Monte Carlo simulation of this problem: If a coin was tossed 5 times, what are the chances that 
   heads would come up 5 times in a row? To do this, you basically simulate the coin tosses using a random outcome 
   and then count how many times the sequence happened, and then work out the percentage.
   

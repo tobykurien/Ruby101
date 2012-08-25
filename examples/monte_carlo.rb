@@ -2,10 +2,9 @@
 #  What are that chances of 10 sequential tosses of a coin coming up the same?
 # @see http://www.devdaily.com/blog/post/ruby/ruby-coin-flip-simulation
 
-SIMULATION_RUNS = 100000   # how many times to run the simulation
-HOW_MANY_OUTCOMES = 6      # coin = 2, dice = 6, etc.
+SIMULATION_RUNS = 1000000   # how many times to run the simulation
+HOW_MANY_OUTCOMES = 2      # coin = 2, dice = 6, etc.
 HOW_MANY_IN_A_ROW = 6     # how many same-results in a row are we looking for?
-
 num_incidents = 0
 SIMULATION_RUNS.times do
     tosses = Array.new(HOW_MANY_IN_A_ROW)
