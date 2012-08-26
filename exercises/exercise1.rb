@@ -12,7 +12,8 @@ movie_data = movies.collect{|m| m.split "  "}
 
 # Find number of movies of a category
 category = "Mystery"
-filtered_movies = movie_data.select{ |m| m[4..-1].include? category }
+#filtered_movies = movie_data.select{ |m| m[4..-1].include? category }
+filtered_movies = movie_data.select{ |(title,year,rating,votes,*cats)| cats.include? category }
 puts "Found #{filtered_movies.length} movie(s) of type #{category}"
 
 # Find best movie of 2000's
